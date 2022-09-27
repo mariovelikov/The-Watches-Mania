@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 const loadUser = createAsyncThunk('auth/loaduser', async () => {
     if (localStorage.getItem('access')) {
         try {
-            const res = await fetch(`http://localhost:8000/api/loaduser/`, {
+            const res = await fetch(`67.205.158.115/api/loaduser/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

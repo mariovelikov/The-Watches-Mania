@@ -6,7 +6,7 @@ const resetPasswordConfirm = createAsyncThunk('auth/reset_password_confirm', asy
         console.log(data);
         // !!22ssEE233AD
 
-        const res = await fetch(`http://localhost:8000/auth/users/reset_password_confirm/`, {
+        const res = await fetch(`67.205.158.115/auth/users/reset_password_confirm/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

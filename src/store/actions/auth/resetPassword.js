@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const resetPassword = createAsyncThunk('auth/reset_password', async (email) => {
     try {
-        const res = await fetch(`http://localhost:8000/auth/users/reset_password/`, {
+        const res = await fetch(`67.205.158.115/auth/users/reset_password/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
