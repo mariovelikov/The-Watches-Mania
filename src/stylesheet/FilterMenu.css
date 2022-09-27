@@ -1,0 +1,124 @@
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 300px;
+}
+
+.filter-item {
+  text-align: center;
+  border-top: 1px solid #495057e2;
+}
+
+.filter-item ul {
+  list-style: none;
+}
+
+.filter-title-box {
+  padding: 2.4rem 0.8rem;
+  font-size: 18px;
+  color: #868e96;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.filter-title-box:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.hidden-box {
+  display: none;
+  transition: all 0.5s;
+}
+
+.active .hidden-box {
+  display: block;
+}
+
+.filter-list-item {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.filter-list-item span {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid #495057;
+  border-radius: 50%;
+}
+
+.filter-list-item span:hover {
+  cursor: pointer;
+}
+
+.checked {
+  background-color: #343a40;
+}
+
+.close-filter-menu {
+  display: none;
+}
+/* ******************************************************************************* */
+/* 1 000px */
+@media (max-width: 62.5em) {
+  .App {
+    position: relative;
+  }
+
+  .filter-section {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 50%;
+    right: 0;
+    margin-top: -8rem;
+    z-index: 1;
+    transform: translateX(100%);
+
+    justify-content: start;
+    transition: all 0.5s;
+
+    /* 1) Hide element */
+    opacity: 0;
+
+    /* 2) Make unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .filter-open .filter-section {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateX(0);
+  }
+
+  .filter-open .close-filter-menu {
+    display: block;
+  }
+
+  .filter-open .open-filter {
+    display: none;
+  }
+
+  .filter-open .icon-mobile-nav[name="search-outline"] {
+    display: none;
+  }
+
+  .container {
+    /* position: relative; */
+    grid-template-columns: 1fr;
+  }
+
+  .filter-title-box {
+    font-size: 1.8rem;
+  }
+}

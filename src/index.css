@@ -1,13 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px / 16px = 62.5%*/
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+
+  color: #495057;
+
+  /* Only works if there is nothing absolutely positioned in relation to body !*/
+  overflow-x: hidden;
+}
+
+a:link {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.flex--space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex--space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid--4cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.order-cart--btn {
+  border: none;
+  display: block;
+  /* padding: 1.2rem 150px; */
+  width: 100%;
+  height: 5rem;
+  margin-top: 3.6rem;
+  transition: all 0.3s;
+  border-radius: 9px;
+  color: #495057;
+  background-color: #acc8e5;
+  font-size: 1.6rem;
+}
+
+.order-cart--btn:hover,
+.order-cart--btn:active {
+  cursor: pointer;
+  background-color: #96bce4;
+}
+
+.auth-form {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  max-width: 80rem;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #adb5bd;
+  border-radius: 9px;
+}
+
+.auth-form button {
+  padding: 3px 10px;
+  color: #555;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #ff6b6b;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.favHeart {
+  color: #ff6b6b;
 }

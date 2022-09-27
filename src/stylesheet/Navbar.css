@@ -1,0 +1,208 @@
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 6.4rem;
+  padding: 0 4.8rem;
+
+  position: relative;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  list-style: none;
+  transition: all 0.3s;
+}
+
+.main-nav-list li {
+  transition: all 0.3s;
+}
+.main-nav-list li:hover {
+  font-size: 2.2rem;
+}
+
+.main-nav-link {
+  color: #495057;
+}
+
+.search-filter-btns {
+  display: none;
+}
+
+.main-nav-form {
+  width: 20%;
+  height: 50%;
+  border: none;
+}
+
+.main-nav-form input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #495057;
+  border-radius: 1.6rem;
+  padding: 1.2rem;
+}
+
+.none {
+  display: none;
+}
+
+/* MOBILE MENU ******************************************************************** */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #343a40;
+}
+
+.close-menu {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 62.5em) {
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    transform: translateX(-100%);
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    /* Hide navigation */
+    /* Allow NO transition at all */
+    /* display: none */
+
+    /* This is correct method to hide menu with transitions */
+
+    /* 1) Hide element */
+    opacity: 0;
+
+    /* 2) Make unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0);
+  }
+
+  .nav-open .btn-mobile-nav {
+    z-index: 2;
+  }
+
+  .nav-open .close-menu {
+    display: block;
+  }
+
+  .nav-open .open-menu {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 6.8rem;
+  }
+
+  .main-nav-link:link {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  /* FILTER MOBILE */
+  .search-filter-btns {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  /* Search Input */
+  .main-nav-form {
+    width: 85%;
+    height: 100%;
+
+    transition: all 0.5s;
+    transform: translateY(-100%);
+
+    /* 1) Hide element */
+    opacity: 0;
+
+    /* 2) Make unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .main-nav-form input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    color: #495057;
+  }
+
+  .main-nav-form input:focus {
+    outline: none;
+    border: 2px solid #495057;
+    border-radius: 2.8rem;
+  }
+
+  .search-open .main-nav-form {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+  }
+
+  .search-open .open-filter,
+  .search-open .search-icon,
+  .search-open .open-menu {
+    display: none;
+  }
+
+  .search-open {
+    gap: 1.6rem;
+  }
+
+  .close-search-input {
+    display: none;
+  }
+
+  .search-open .close-search-input {
+    display: block;
+  }
+}

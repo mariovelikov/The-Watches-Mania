@@ -1,0 +1,19 @@
+.container {
+  margin: 8rem auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 1.6rem;
+
+  max-width: 140rem;
+}
+
+/* TABLETS */
+/* 1248px */
+
+/*TABLETS BELOW 1000px */
+@media (max-width: 62.5em) {
+  .grid--4cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

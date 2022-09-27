@@ -1,0 +1,110 @@
+.home-page-container {
+  min-height: 800px;
+  background-size: cover;
+  position: relative;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../hero-2.jpg);
+
+  background-repeat: no-repeat;
+}
+
+.home-page-inner-container {
+  line-height: 1.5;
+  font-size: 5.2rem;
+  letter-spacing: 1px;
+  color: #dee2e6;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.home-page-inner-container h1 {
+  font-size: 3.6rem;
+}
+
+.home-page-container p {
+  font-size: 1.8rem;
+}
+
+.home-page-container .products-btn:link,
+.home-page-container .products-btn:visited {
+  align-self: flex-start;
+  text-align: center;
+  background-color: #acc8e5;
+  color: black;
+  padding: 10px 50px;
+  border-radius: 9px;
+}
+
+.home-page-container .products-btn:hover,
+.home-page-container .products-btn:active {
+  background-color: #96bce4;
+}
+
+.top-watches-title {
+  text-align: center;
+  font-size: 5.2rem;
+  margin-top: 6.4rem;
+}
+
+.top-watches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 120rem;
+  margin: 100px auto;
+  gap: 1.6rem;
+}
+
+/* QUERIES */
+
+/* BELOW 1250px (Smaller desktops)*/
+
+@media (max-width: 78em) {
+  html {
+    /* 9px */
+    font-size: 56.25%;
+  }
+
+  .home-page-container p {
+    font-size: 1.6rem;
+  }
+
+  .home-page-inner-container h1 {
+    font-size: 3rem;
+  }
+
+  .top-watches-title {
+    font-size: 3rem;
+  }
+
+  .top-watches {
+    padding: 0 4.8rem;
+    display: grid;
+    align-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 25em) {
+  html {
+    font-size: 43.75%;
+  }
+
+  .home-page-container {
+    min-height: 60rem;
+  }
+  /* 
+  .home-page-inner-container {
+    top: 35%;
+  } */
+}

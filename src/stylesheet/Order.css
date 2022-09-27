@@ -1,0 +1,141 @@
+.order-container {
+  padding: 0 3.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+
+  margin: 100px auto;
+  max-width: 140rem;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.address-form input {
+  height: 40px;
+  padding: 10px;
+
+  border: 1px solid #adb5bd;
+  border-radius: 9px;
+}
+
+.address-form .border-red {
+  border: 2px solid #ff6b6b;
+}
+
+.order-img-box {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.quantity {
+  position: absolute;
+}
+
+.order-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ordered-products {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.ordered-product-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #adb5bd;
+}
+
+.ordered-product-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.ordered-product-quantity {
+  font-size: 1.4rem;
+}
+
+.ordered-product-quantity span {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.ordered-product-total {
+  font-size: 1.6rem;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.ordered-product-total span {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* finished order */
+.finished-order {
+  margin: 100px auto;
+  max-width: 80rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.finished-order p {
+  font-size: 1.8rem;
+}
+
+.check-green {
+  color: #94d82d;
+  font-size: 6.2rem;
+}
+
+.finished-order button {
+  cursor: pointer;
+
+  display: block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.9rem;
+}
+
+@media (max-width: 62.5em) {
+  .order-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ordered-products {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  .ordered-product-total {
+    font-size: 2.4rem;
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+
+  .ordered-product-total span {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .order-img-box {
+    height: 10rem;
+    width: 10rem;
+  }
+}
