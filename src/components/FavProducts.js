@@ -7,8 +7,6 @@ import { fetchData, getFavoritesProducts } from "../store/reducers/productsSlice
 import ProductComponent from "./ProductComponent"
 import { Link } from 'react-router-dom'
 
-// import removeProductFromFavorites from "../store/actions/ads/removeProductFromFavorites";
-
 
 const FavProducts = () => {
     const isAuthenticated = useSelector(state => state.auth.isAuthenticated)

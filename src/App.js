@@ -21,8 +21,6 @@ import { fetchData } from './store/reducers/productsSlice'
 import checkToken from "./store/actions/auth/checkToken"
 import loadUser from "./store/actions/auth/loadUser"
 
-// import EditAd from './components/EditAd';
-
 
 function App() {
   const data = useSelector(state => state.ads)
@@ -65,7 +63,6 @@ function App() {
         <Route path="/products" element={<LandingPage />} />
         <Route path="/:id/details" element={<SingleAd />} />
         <Route path="/post" element={<PostAd />} />
-        {/* <Route path="/:id/details/edit" element={<EditAd />} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
         <Route path="/favorites" element={<FavProducts />} />
