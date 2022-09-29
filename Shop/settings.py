@@ -90,22 +90,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Shop.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'onlineshop',
-        'USER': 'postgres',
-        'PASSWORD': '104010',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -151,14 +135,6 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-'''
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'djangoapp514@gmail.com'
-EMAIL_HOST_PASSWORD = '2pN82A5Y-iND!TC'
-'''
 
 EMAIL_USE_TLS = True
 
