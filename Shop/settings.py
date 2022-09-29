@@ -191,15 +191,6 @@ SIMPLE_JWT = {
 # Custom user model
 AUTH_USER_MODEL = 'accounts.User'
 
-
-# Email Settings
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'djangoapp514@gmail.com'
-EMAIL_HOST_PASSWORD = 'qeesdettiqbawqmg'
-EMAIL_USE_TLS = True
-
-
 try:
     from .local_settings import *
 except ImportError:
