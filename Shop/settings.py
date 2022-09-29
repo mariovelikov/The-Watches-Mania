@@ -222,4 +222,9 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'djangoapp514@gmail.com'
 EMAIL_HOST_PASSWORD = 'qeesdettiqbawqmg'
 EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

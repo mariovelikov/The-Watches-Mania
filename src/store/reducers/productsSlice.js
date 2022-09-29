@@ -110,6 +110,9 @@ const ProductsSlice = createSlice({
             .addCase(orderProducts.fulfilled, (state, action) => {
                 if ('error' in action.payload) {
                     state.error = action.payload.error
+                } else {
+                    // clear all products from cart
+                    localStorage.setItem('products', JSON.stringify([]))
                 }
             })
     }

@@ -40,13 +40,6 @@ const Checkouts = () => {
         dispatch(orderProducts(state))
 
         setFinishOrder(true)
-
-        removeAllProductsFromCart()
-    }
-
-    function removeAllProductsFromCart() {
-        // When order is completed remove all products from cart !
-        localStorage.setItem('products', JSON.stringify([]))
     }
 
     function handlerChange(e) {
