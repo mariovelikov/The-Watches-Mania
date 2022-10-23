@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const signIn = createAsyncThunk('auth/signin', async (data) => {
     try {
-        const res = await fetch(`67.205.158.115/api/token/`, {
+        const res = await fetch(`http://127.0.0.1:8000/api/token/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

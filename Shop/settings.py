@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-import os
 from os.path import join
 from pathlib import Path
 from datetime import timedelta
@@ -25,10 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6z1gh_hs2h7672n@%%eyoxp74$dx0yc-@-y9st*rd)f40g)n&t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['67.205.158.115',
-                 'thewatchesmania.com', 'www.thewatchesmania.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,7 +47,13 @@ INSTALLED_APPS = [
     'shop_system'
 ]
 
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+]
 
 
 MIDDLEWARE = [
@@ -71,7 +75,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': [BASE_DIR / 'templates'],
-        'DIRS': [os.path.join(BASE_DIR / 'build/')],
+        'DIRS': [BASE_DIR / 'build/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,6 +89,22 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Shop.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'onlineshop',
+        'USER': 'postgres',
+        'PASSWORD': '104010',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -120,15 +140,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
+STATIC_ROOT = 'staticfiles/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
+    BASE_DIR / "static/",
+    BASE_DIR / "build/static/",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+'''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'djangoapp514@gmail.com'
+EMAIL_HOST_PASSWORD = '2pN82A5Y-iND!TC'
+'''
 
 EMAIL_USE_TLS = True
 
@@ -185,7 +215,11 @@ SIMPLE_JWT = {
 # Custom user model
 AUTH_USER_MODEL = 'accounts.User'
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+
+# Email Settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'djangoapp514@gmail.com'
+EMAIL_HOST_PASSWORD = 'qeesdettiqbawqmg'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False

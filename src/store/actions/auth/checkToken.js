@@ -5,7 +5,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const checkToken = createAsyncThunk('auth/checkToken', async () => {
     try {
-        return await fetch(`67.205.158.115/api/token/verify/`, {
+        return await fetch(`http://127.0.0.1:8000/api/token/verify/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
