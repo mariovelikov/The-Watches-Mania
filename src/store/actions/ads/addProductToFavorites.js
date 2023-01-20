@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit"
 
 const addProductToFavorites = createAsyncThunk('ads/addProductToFavorites', async (data) => {
     try {
-        const post = await fetch('67.205.158.115/api/favorites/', {
+        const post = await fetch('http://localhost:8000/api/favorites/', {
             method: 'POST',
             headers: {
                 'Authorization': `JWT ${localStorage.getItem('access')}`,
