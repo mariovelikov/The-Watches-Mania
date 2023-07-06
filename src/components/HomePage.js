@@ -11,6 +11,7 @@ const StartPage = () => {
         let products = []
 
         const brands = ['rolex', 'citizen', 'tcm',]
+
         for (let brand of brands) {
             products.push(...data.filter(el => el.brand.toLowerCase() === brand))
         }
@@ -35,7 +36,7 @@ const StartPage = () => {
                     <div key={el.id} className="product-container">
                         <Link to={`/${el.id}/details`} className="product-link-container">
                             <div className="img-container">
-                                <img src={`http://localhost:8000${el.image}`} alt="watch photo" />
+                                <img src={`http://localhost:8000${el.image}`} alt="watch" />
                             </div>
                             <div className="text-container">
                                 <p>{el.title}</p>
@@ -49,39 +50,3 @@ const StartPage = () => {
     )
 }
 export default StartPage
-
-
-
-
-/*
-<div className='home-page-inner-container'>
-                    <h5>HELLO home PAGE</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error expedita esse quis distinctio officia maiores minus vel officiis id ut.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error expedita esse quis distinctio officia maiores minus vel officiis id ut.</p>
-                    <Link className='products-btn' to="/products">PRODUCTS</Link>
-                </div>
-                 */
-
-
-
-
-
-/*
-
-<div className='top-watches'>
-                {topWatches?.slice(0, 4).map(el => (
-                    <div key={el.id} className="product-container">
-                        <Link to={`/${el.id}/details`} className="product-link-container">
-                            <div className="img-container">
-                                <img src={`http://localhost:8000${el.image}`} alt="watch photo" />
-                            </div>
-                            <div className="text-container">
-                                <p>{el.title}</p>
-                                <p>$ {el.price}</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
-            </div>
-
-
-*/
