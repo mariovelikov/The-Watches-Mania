@@ -1,3 +1,5 @@
+QUICK START
+
 1. Create Virtual Enviroment for python: ~ python -m venv venv
 2. Activate VENV: ~ venv\Scripts\activate
 3. Install requirements for project: ~ pip install -r requirements.txt
