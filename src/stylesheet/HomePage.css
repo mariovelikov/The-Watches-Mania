@@ -4,7 +4,7 @@
   position: relative;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../hero-2.jpg);
+    url(/src/hero-2.jpg);
 
   background-repeat: no-repeat;
 }

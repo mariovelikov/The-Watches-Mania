@@ -10,7 +10,7 @@ const StartPage = () => {
     useEffect(() => {
         let products = []
 
-        const brands = ['rolex', 'citizen', 'tcm',]
+        const brands = ['rolex', 'citizen', 'tcm']
 
         for (let brand of brands) {
             products.push(...data.filter(el => el.brand.toLowerCase() === brand))

@@ -94,17 +94,23 @@ WSGI_APPLICATION = 'Shop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+    # 'ENGINE': 'django.db.backends.postgresql',
+    # 'NAME': 'onlineshop',
+    # 'USER': 'postgres',
+    # 'PASSWORD': '104010',
+    # 'HOST': 'localhost',
+    # 'PORT': '5432'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'onlineshop',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': '104010',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'PASSWORD': 'yZHXDTtGZoXoXMOYluodhkBuspUZczsm',
+        'HOST': 'centerbeam.proxy.rlwy.net',
+        'PORT': '59861'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
