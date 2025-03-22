@@ -1,3 +1,14 @@
+1. Create Virtual Enviroment for python: ~ python -m venv venv
+2. Activate VENV: ~ venv\Scripts\activate
+3. Install requirements for project: ~ pip install -r requirements.txt
+4. Start localhost: ~ python manage.py runserver
+
+
+
+If u want to start only Frontend follow steps bellow
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
